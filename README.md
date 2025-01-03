@@ -33,6 +33,28 @@ This repository presents a complete, flexible, and ready-to-use application to i
 ```markdown
 docker pull arshemii/drone_od:26nov24
 ```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then, start a container with:
+```markdown
+  docker run -it --privileged --rm \
+  --user root \
+  --device /dev/video0:/dev/video0 \
+  --device /dev/video0:/dev/video1 \
+  --device /dev/video0:/dev/video2 \
+  --device /dev/video0:/dev/video3 \
+  --device /dev/video0:/dev/video4 \
+  --device /dev/video0:/dev/video5 \
+  --device /dev/video0:/dev/video6 \
+  --device /dev/video0:/dev/video7 \
+  -e QT_QPA_PLATFORM=xcb \
+  -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY \
+  --cpus="1.0" \
+  --memory="1g" \
+  arshemii/drone_od:26nov24
+
+
+# Change devices according to your video device
+# Change cpu and memory limitation according to your hardware
+```
 &nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu <br>
 &nbsp;&nbsp; 3. Open a terminal inside the cloned repository or run: <br>
 ```markdown
