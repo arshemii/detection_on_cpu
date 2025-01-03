@@ -31,7 +31,7 @@ This repository presents a complete, flexible, and ready-to-use application to i
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It is better to install pyrealsense2 on ubunto not newer than 22.04 <br>
 &nbsp;&nbsp; 1.1. You can also pull the docker image, go to the folder detection_on_cpu, and continue from step 4:<br>
 ```markdown
-docker pull arshemii/drone_od:26nov24 <br>
+docker pull arshemii/drone_od:26nov24
 ```
 &nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu <br>
 &nbsp;&nbsp; 3. Open a terminal inside the cloned repository or run: <br>
@@ -47,3 +47,12 @@ python3 inference_main.py --model effdet --device webcam --head vis --conf 0.99 
 # -- head choices: ['text', 'vis', 'map'] map is available only for rgbd
 
 ```
+## References:
+- https://docs.openvino.ai/2024/index.html
+- https://docs.ultralytics.com
+- https://github.com/google/automl/tree/master/efficientdet
+- https://github.com/xingyizhou/CenterNet
+- https://github.com/facebookresearch/detr
+
+## Contact:
+- [&nbsp;Email](arshemii1373@gmail.com)
