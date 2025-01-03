@@ -27,9 +27,9 @@ This repository presents a complete, flexible, and ready-to-use application to i
 
 ----------------------------------------------------------------
 ## How to use:
-&nbsp;&nbsp; 1. you should have installed OpenCV, OpenVino runtime, pyrealsense2, scipy, and numpy. It is better to install pyrealsense2 on ubunto not newer than 22.04
-&nbsp;&nbsp; 1.1. You can use 
-&nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu
-&nbsp;&nbsp; 3. Open a terminal inside the cloned repository or run:
+&nbsp;&nbsp; 1. you should have installed OpenCV, OpenVino runtime, pyrealsense2, scipy, and numpy. It is better to install pyrealsense2 on ubunto not newer than 22.04 <br>
+&nbsp;&nbsp; 1.1. You can use <br>
+&nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu <br>
+&nbsp;&nbsp; 3. Open a terminal inside the cloned repository or run: <br>
 ```markdown
 cd path/to/cloned/repo
