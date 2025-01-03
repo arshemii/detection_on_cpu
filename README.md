@@ -17,4 +17,19 @@ This repository presents a complete, flexible, and ready-to-use application to i
 - [&nbsp;EfficientDet GitHub Repository](https://github.com/google/automl/tree/master/efficientdet)
 
 
+## Specifications:
+- &nbsp;&nbsp; Capture frames from Webcam and RGB-D device (Intel RealSense D435)
+- &nbsp;&nbsp; Data sctructure and types are Numpy f32 since the test hardware has Intel® SSE4.2
+- &nbsp;&nbsp; Input size flexibility due to dynamic size input layer for all models
+- &nbsp;&nbsp; Use OpenVino runtime for inference (Asynchronous inference)
+- &nbsp;&nbsp; 3 different heads for RGB-D: Textual Report, Stream Visualization, and a Top-view B&W Map
+- &nbsp;&nbsp; 2 different heads for RGB: Textual Report and Stream Visualization
 
+----------------------------------------------------------------
+## How to use:
+&nbsp;&nbsp; 1. you should have installed OpenCV, OpenVino runtime, pyrealsense2, scipy, and numpy. It is better to install pyrealsense2 on ubunto not newer than 22.04
+&nbsp;&nbsp; 1.1. You can use 
+&nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu
+&nbsp;&nbsp; 3. Open a terminal inside the cloned repository or run:
+```markdown
+cd path/to/cloned/repo
