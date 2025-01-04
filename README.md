@@ -31,11 +31,14 @@ This repository presents a complete, flexible, and ready-to-use application to i
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It is better to install pyrealsense2 on ubunto not newer than 22.04 <br>
 &nbsp;&nbsp; 1.1. You can also pull the docker image, go to the folder detection_on_cpu, and continue from step 4:<br>
 ```markdown
-docker pull arshemii/drone_od:26nov24
+docker pull arshemii/drone_od:04jan25
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then, start a container with:
 ```markdown
-  docker run -it --privileged --rm \
+xhost +local:docker
+
+
+docker run -it --privileged --rm \
   --user root \
   --device /dev/video0:/dev/video0 \
   --device /dev/video0:/dev/video1 \
@@ -49,11 +52,12 @@ docker pull arshemii/drone_od:26nov24
   -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY \
   --cpus="1.0" \
   --memory="1g" \
-  arshemii/drone_od:26nov24
+  arshemii/drone_od:04jan25
 
 
 # Change devices according to your video device
 # Change cpu and memory limitation according to your hardware
+# The first command is necessary to grant access to xcb to containers
 ```
 &nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu <br>
 &nbsp;&nbsp; 3. Open a terminal inside the cloned repository or run: <br>
