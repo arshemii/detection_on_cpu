@@ -69,6 +69,15 @@ python3 inference_main.py --model effdet --device webcam --head vis --conf 0.99 
 # -- head choices: ['text', 'vis', 'map'] map is available only for rgbd
 
 ```
+&nbsp;&nbsp; 5. For testing the time for each inference part, run inside the terminal:
+```markdown
+python3 inference_test.py --model effdet --device webcam --head vis
+
+# --model choices: ['yolov5nu', 'yolov8n', 'yolo11n', 'ctdet', 'detr', 'effdet']
+# -- device choices: ['webcam', 'rgbd']
+# -- head choices: ['text', 'vis', 'map'] map is available only for rgbd
+```
+
 ## References:
 - https://docs.openvino.ai/2024/index.html
 - https://docs.ultralytics.com
