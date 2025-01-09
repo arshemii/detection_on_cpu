@@ -47,7 +47,7 @@ def mapping_cam_related(detections, top_array, depth_frame, rgb_ints):
     Args:
         detections: A numpy array float32 of shape [N, length of F]
                     N is number of detections in a frame
-                    F is features: score, label, x, y, w, and h
+                    F is features: label, score, x, y, w, and h
                     ** x and y are wrt the frame top-left
                     ** If depends on size, provide in original format
         top_array: A 300*200 numpy array from previous step
@@ -59,7 +59,7 @@ def mapping_cam_related(detections, top_array, depth_frame, rgb_ints):
     """
 
     if not np.shape(detections)[0] == 0:
-        dets = detections[1:]
+        dets = np.delete(detections, 1, axis=1)
         top_array[:285, :] = 0
         for obj in dets:
             top_array = add_obj_map(top_array, obj, depth_frame, rgb_ints)
