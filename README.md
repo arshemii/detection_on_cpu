@@ -59,6 +59,11 @@ docker run -it --privileged --rm \
 # Change cpu and memory limitation according to your hardware
 # The first command is necessary to grant access to xcb to containers
 ```
+&nbsp;&nbsp; 1.2. if you use a docker image, to have the latest version, do the following in each start-up:
+```markdown
+mkdir detection_on_cpu
+git clone https://github.com/arshemii/detection_on_cpu.git
+```
 &nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu <br>
 &nbsp;&nbsp; 3. Open a terminal inside the cloned repository or run: <br>
 ```markdown
@@ -79,6 +84,14 @@ python3 inference_test.py --model effdet --device webcam --head vis
 
 # --model choices: ['yolov5nu', 'yolov8n', 'yolo11n', 'ctdet', 'detr', 'effdet']
 # -- device choices: ['webcam', 'rgbd']
+# -- head choices: ['text', 'vis', 'map'] map is available only for rgbd
+```
+
+&nbsp;&nbsp; 5. For testing on a recorded bag file (raw), run inside the terminal:
+```markdown
+python3 inference_bag.py --model effdet --head map --conf 0.99 --iou 0.3
+
+# --model choices: ['yolov5nu', 'yolov8n', 'yolo11n', 'ctdet', 'detr', 'effdet']
 # -- head choices: ['text', 'vis', 'map'] map is available only for rgbd
 ```
 
