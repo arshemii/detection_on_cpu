@@ -14,20 +14,20 @@ import cv2
 
 def add_obj_map(top_array, obj, depth_frame, rgb_ints):
     
-    scale = 0.5  # Convert cm to pixel size of top_array
+    scale = 1.0  # Convert cm to pixel size of top_array
     
     # xc, yc, w, h, d
     object_pose_cm = ut.bbox_to_cm_report(obj[1:], rgb_ints, depth_frame)
     
     obj_center_x = object_pose_cm[0] + object_pose_cm[2]/2
     
-    # calculate height in top-view image
+    # calculate height in top-view image (h in top-view array)
     h_top = np.sqrt(np.square(object_pose_cm[4]) - np.square(obj_center_x))
     
-    center = (int(scale*obj_center_x), int(scale*(570 - h_top)))
+    center = (int(scale*obj_center_x)+200, int(585 - scale*h_top)) # w-h format in top_array
     
     # Just filter objects inside the 6*4 meter boundary
-    if not object_pose_cm[0] > 399 and not h_top > 569:
+    if 0 <= center[1] <= 400 and h_top <= 585:
         cv2.circle(top_array, center, 8, 255, 1)
         cv2.putText(top_array, str(int(obj[0])), (center[0] - 5,
                                              center[1] + 5), cv2.FONT_HERSHEY_SIMPLEX,
@@ -54,13 +54,13 @@ def mapping_cam_related(detections, top_array, depth_frame, rgb_ints):
         depth_frame is distance frame in meter
                 
     Returns:
-        A (300,200) numpy array with only gray channel.
+        A (600,400) numpy array with only gray channel.
         This numpy array is top-view anc can be visualized with cv2
     """
 
     if not np.shape(detections)[0] == 0:
         dets = np.delete(detections, 1, axis=1)
-        top_array[:285, :] = 0
+        top_array[:585, :] = 0
         for obj in dets:
             top_array = add_obj_map(top_array, obj, depth_frame, rgb_ints)
     
