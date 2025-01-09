@@ -61,7 +61,7 @@ docker run -it --privileged --rm \
 ```
 &nbsp;&nbsp; 1.2. if you use a docker image, to have the latest version, do the following in each start-up:
 ```markdown
-mkdir detection_on_cpu
+rmdir detection_on_cpu
 git clone https://github.com/arshemii/detection_on_cpu.git
 ```
 &nbsp;&nbsp; 2. Clone this repository and cd detection_on_cpu <br>
