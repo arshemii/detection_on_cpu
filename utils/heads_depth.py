@@ -130,7 +130,7 @@ def capture_annotation_depth(detections, rgb_frame, depth_frame, class_names):
         
         cv2.rectangle(annot_array, (int(dets[2]), int(dets[3]))
                       ,(int(dets[2] + dets[4]), int(dets[3] + dets[5]))
-                      , (0, 0, 255), 1, cv2.LINE_4, shift = 1)
+                      , (0, 0, 255), 1, cv2.LINE_4)
     
         if class_names:
             cv2.putText(annot_array
