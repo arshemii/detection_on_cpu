@@ -230,8 +230,8 @@ def rgbd_init(h, w, fps):
 
     pipe = rs.pipeline()
     cfg = rs.config()
-    cfg.enable_stream(rs.stream.color, h, w, rs.format.bgr8, fps)  # RGB stream
-    cfg.enable_stream(rs.stream.depth, h, w, rs.format.z16, fps)  # Depth stream
+    cfg.enable_stream(rs.stream.color, w, h, rs.format.bgr8, fps)  # RGB stream
+    cfg.enable_stream(rs.stream.depth, w, h, rs.format.z16, fps)  # Depth stream
         
     # Start the pipeline
     profile = pipe.start(cfg)
