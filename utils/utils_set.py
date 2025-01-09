@@ -215,7 +215,7 @@ def frame_preprocessing(frame, model_name):
 
 
 def rgbd_preprocessing(color, depth, depth_scale, model_name):
-    color = np.asanyarray(color.get_data(), dtype = np.unit8)
+    color = np.asanyarray(color.get_data(), dtype = np.uint8)
     depth = np.asanyarray(depth.get_data(), dtype = np.float32)
     depth = depth * depth_scale
     if "yolo" in model_name:
