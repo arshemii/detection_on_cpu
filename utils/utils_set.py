@@ -34,7 +34,7 @@ def bbox_to_cm_report(one_object_bbox, rgb_ints, scaled_depth_frame):
     
     # xmin, ymin, w, and h
     cm_report[0] = (one_object_bbox[0] - ppx) * cm_report[4] / fx
-    cm_report[1] = (one_object_bbox[1] - ppy) * cm_report[4] / fy
+    cm_report[1] = (-one_object_bbox[1] + ppy) * cm_report[4] / fy
     cm_report[2] = (one_object_bbox[2]) * cm_report[4] / fx
     cm_report[3] = (one_object_bbox[3]) * cm_report[4] / fy
     
