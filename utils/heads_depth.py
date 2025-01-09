@@ -92,7 +92,7 @@ def print_report(detections, depth_frame, rgb_ints, class_names):
             object_pose_cm = ut.bbox_to_cm_report(dets[2:], rgb_ints, depth_frame)
             # Converting to the center of the object
             object_pose_cm[0] = object_pose_cm[0] + object_pose_cm[2]/2
-            object_pose_cm[1] = object_pose_cm[1] + object_pose_cm[3]/2
+            object_pose_cm[1] = object_pose_cm[1] - object_pose_cm[3]/2
             if class_names:
                 print(f"{class_names[int(dets[0])]} in x: {int(object_pose_cm[0])}, y: {int(object_pose_cm[1])}, d: {int(object_pose_cm[4])} with score: {dets[1]:.2f}")
             else:
