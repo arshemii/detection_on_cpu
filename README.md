@@ -3,9 +3,7 @@
 </div>
 
 This repository is the ROS branch of [CPU-based Object Detection Inference](https://github.com/arshemii/detection_on_cpu).
-<div align="center">
-    <img src="images/repex.png" alt="Example Image" width="800">
-</div>
+
 
 
 ## Specifications:
