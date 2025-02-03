@@ -25,7 +25,7 @@ This repository presents a complete, flexible, and ready-to-use application to i
 - &nbsp;&nbsp; 3 different heads for RGB-D: Textual Report, Stream Visualization, and a Top-view B&W Map
 - &nbsp;&nbsp; 2 different heads for RGB: Textual Report and Stream Visualization
 
-### If you want to integrate this repository into your ROS application, check ROS branch of this repository:
+### <span style="color:green">If you want to integrate this repository into your ROS application, check the ROS branch of this repository:</span>
 - [&nbsp;ROS integration](https://github.com/arshemii/detection_on_cpu/tree/ROS)
 
 ----------------------------------------------------------------
