@@ -1,2 +1,7 @@
-If you are using inference_baf.py,
-you should put a .bag file with name "recorded_stream.bag" here.
+## Available bag files  
+
+If you don't have access to any RGB-D sensor, you can use the links below to download a .bag file called outdoors.bag here:  
+
+- [A .bag file](https://librealsense.intel.com/rs-tests/TestData/outdoors.bag)  
+
+
