@@ -30,9 +30,19 @@ chmod +x script_name.py
 ```
 &nbsp;&nbsp; 5. Run inside the terminal:
 ```markdown
-settask -c 0,1 detection inference_main.py
+settask -c 0,1 rosrun detection inference_main.py
 
 # For settask, select the number of available cores
+
+```
+
+&nbsp;&nbsp; 5.1. In case there is no RGB-D sensor, download: <br>
+- [outdoors.bag](https://librealsense.intel.com/rs-tests/TestData/outdoors.bag) <br>
+
+&nbsp;&nbsp; 5.2. Move it to assets and run the following node to mimic a RGB-D stream with 30 fps: <br>
+```markdown
+rosrun detection camera.py
+
 
 ```
 
