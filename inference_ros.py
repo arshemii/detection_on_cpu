@@ -61,7 +61,7 @@ def main():
     args.iou = 0.40
     args.conf = 0.45
     args.filter_labels = None
-    args.ROOT = Path.cwd().resolve()
+    args.ROOT = "/home/catkin_ws/src/detection/scripts/"
     args.coco90 = [] # check background
     args.coco80 = [] # check backgrounds
     args.msg_layout = 'RGB'
@@ -71,8 +71,8 @@ def main():
 
     rospy.init_node('detection_node', anonymous=True)
     bridge = CvBridge()
-    rospy.Subscriber('/device_0/sensor_1/Color_0/image/data', Image, color_callback)
-    rospy.Subscriber('/device_0/sensor_0/Depth_0/image/data', Image, depth_callback)    
+    rospy.Subscriber('/d400/aligned_depth_to_color/image_raw', Image, depth_callback)
+    rospy.Subscriber('/d400/color/image_raw', Image, color_callback)   
     rospy.Subscriber('/device_0/sensor_1/Color_0/info/camera_info', CameraInfo, cinfo_callback)
     # rospy.spin()
 
@@ -85,7 +85,7 @@ def main():
     rospy.loginfo("Gathering sensor info ...")
 
     attempts = 0
-    max_attempts = 10
+    max_attempts = 5
     while fx is None and attempts < max_attempts:
         rospy.sleep(0.1)
         rospy.loginfo("No camera info received")
