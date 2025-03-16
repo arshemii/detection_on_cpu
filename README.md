@@ -18,7 +18,7 @@ This repository presents a complete, flexible, and ready-to-use application to i
 
 ## Specifications:
 <br>
-![Demo](assets/Untitled%20design.gif)
+![Demo](assets/Untitled_design.gif)
 <br>
 <br>
 <br>
