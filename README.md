@@ -16,6 +16,13 @@ This repository presents a complete, flexible, and ready-to-use application to i
 - [&nbsp;DETR Paper](https://arxiv.org/abs/1904.07850)
 - [&nbsp;EfficientDet GitHub Repository](https://github.com/google/automl/tree/master/efficientdet)
 
+## Specifications:
+<br>
+![Demo](assets/Untitled%20design.gif)
+<br>
+<br>
+<br>
+
 
 ## Specifications:
 - &nbsp;&nbsp; Capture frames from Webcam and RGB-D device (Intel RealSense D435)
