@@ -17,9 +17,9 @@ This repository presents a complete, flexible, and ready-to-use application to i
 - [&nbsp;EfficientDet GitHub Repository](https://github.com/google/automl/tree/master/efficientdet)
 
 ## Specifications:
-<br>
-![Demo GIF](assets/demo.gif)
-<br>
+<p align="center">
+  <img src="assets/demo.gif" alt="Demo GIF" width="800">
+</p>
 <br>
 <br>
 
