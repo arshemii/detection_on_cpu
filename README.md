@@ -18,7 +18,7 @@ This repository presents a complete, flexible, and ready-to-use application to i
 
 ## Specifications:
 <br>
-![Demo GIF](assets/demo.gif)
+![Demo GIF](https://github.com/arshemii/detection_on_cpu/blob/master/assets/demo.gif)
 <br>
 <br>
 <br>
