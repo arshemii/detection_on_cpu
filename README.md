@@ -18,7 +18,7 @@ This repository presents a complete, flexible, and ready-to-use application to i
 
 ## Specifications:
 <br>
-![Demo](assets/demo.gif)
+![Demo GIF](assets/demo.gif)
 <br>
 <br>
 <br>
